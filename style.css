@@ -1,21 +1,14 @@
-.timer{  
+body {
+  background: #000;
+}
+.timer{
     text-align:center;
-    width:500px;
+    width:600px;
     margin:30px auto 0;
     padding:10px 0;
-    font-size:1.5em;
-    color:#fff;
+    font-size:2em;
+    color:#f00;
     text-shadow:1px 1px 1px #ccc;
     font-weight:700;
-    line-height:40px;
-    border:1px solid #ef007c;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #ef007c), color-stop(0.00, #ff5db1));
-    background: -webkit-linear-gradient(top, #ff5db1 0%, #ef007c 100%);
-    background: -moz-linear-gradient(top, #ff5db1 0%, #ef007c 100%);
-    background: -o-linear-gradient(top, #ff5db1 0%, #ef007c 100%);
-    background: -ms-linear-gradient(top, #ff5db1 0%, #ef007c 100%);
-    background: linear-gradient(top, #ff5db1 0%, #ef007c 100%);
-    shadow: 2px 2px 16px 7px #ddd, inset 0px 0px 1px 1px #f5add2; /* Safari, Chrome用 */
-    -moz-box-shadow: 2px 2px 16px 7px #ddd, inset 0px 0px 1px 1px #f5add2; /* Firefox用 */
-    box-shadow: 2px 2px 16px 7px #ddd, inset 0px 0px 1px 1px #f5add2; /* CSS3 */
+    line-height:50px;
 }
