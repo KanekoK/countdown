@@ -39,7 +39,7 @@
           var me = this;
 
               if( ( this.timeLimit - today ) > 0 ){
-              timer = 'BBQまであと<br />' + days + '日' + this.addZero( hours ) + '時間' + this.addZero( mins ) + '分'+ this.addZero( secs ) + '秒'  + this.addZero( milis ) + ' です。'
+              timer = '期限まであと<br />' + days + '日' + this.addZero( hours ) + '時間' + this.addZero( mins ) + '分'+ this.addZero( secs ) + '秒'  + this.addZero( milis ) + ' です。'
               this.elem.innerHTML = timer;
               tid = setTimeout( function() { me.countDown(); }, 10 );
 
@@ -67,26 +67,50 @@
   </script>
 </head>
 <body>
+  <div class="datepicker">
+    <p>期限を入力してください</p>
+    <input type="date" name="date" class="date">
+  </div>
 
   <div class="timer">
   <div class="timer_1" id="sampleA"></div>
-  <script language="JavaScript" type="text/javascript">
-  <!--
-  cdTimer1();
 
-  function cdTimer1() {
+
+
+
+
+  <script language="JavaScript" type="text/javascript">
+
+  $('.date').change(function() {
+    var date = $('.date').val();
+    if (date) {
+      date = new Date(date);
+      var year = date.getFullYear();
+      var month = date.getMonth() + 1;
+      var day = date.getDate();
+      console.log(date);
+      cdTimer1(year, month, day);
+    }
+  });
+
+
+
+
+
+
+
+  function cdTimer1(year, month, day) {
 
   // 設定項目 ここから---------------------------------------------
       // タグ要素のID名
       var elemID = 'sampleA';
-
       // 期限日を設定
-      var year    =   2017;           // 年
-      var month   =   8;              // 月
-      var day     =   5;             // 日
+      var year    =   year;           // 年
+      var month   =   month;          // 月
+      var day     =   day;            // 日
 
       // 期限終了後のメッセージ
-      var limitMessage    =   'BBQは終了しました。';
+      var limitMessage    =   '期限は終了しました。';
 
       var msgClass = 'msg_1';
   // 設定項目 ここまで---------------------------------------------
@@ -96,8 +120,6 @@
       var timer = new CountdownTimer( elemID, timeLimit, limitMessage, msgClass );
       timer.countDown();
   }
-
-  // -->
   </script>
   </div>
 

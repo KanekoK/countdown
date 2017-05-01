@@ -1,14 +1,26 @@
 body {
   background: #000;
 }
-.timer{
-    text-align:center;
-    width:600px;
-    margin:30px auto 0;
-    padding:10px 0;
-    font-size:2em;
-    color:#f00;
-    text-shadow:1px 1px 1px #ccc;
-    font-weight:700;
-    line-height:50px;
+.timer {
+  text-align:center;
+  width:600px;
+  margin:30px auto 0;
+  padding:10px 0;
+  font-size:2em;
+  color:#f00;
+  text-shadow:1px 1px 1px #ccc;
+  font-weight:700;
+  line-height:50px;
+}
+.datepicker {
+  text-align: center;
+  margin-top: 60px;
+}
+.datepicker p {
+  font-size: 25px;
+  color: #fff;
+}
+.datepicker .date {
+  font-size: 20px;
+  padding: 5px 5px 5px 15px;
 }
